@@ -120,6 +120,10 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  color: black;
+}
+
 body {
   margin: 0;
   letter-spacing: 0.4px;
@@ -128,14 +132,18 @@ body {
           box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
   background-color: #969c97;
-  color: #000000;
+  color: black;
 }
 
-li, button {
+a {
+  color: black;
+}
+
+li, button, a {
   font-family: 'Playfair Display', 'serif';
   font-weight: 400;
   letter-spacing: 3px;
-  color: #3b3f3c;
+  color: black;
   list-style-type: none;
 }
 
@@ -175,17 +183,24 @@ li, button {
 }
 
 .hero-image .hero-text {
+  font-family: 'Playfair Display', 'serif';
   padding: 0;
-  color: black;
+  font-size: 0.5em;
 }
 
 .hero-image .hero-work {
   -webkit-animation: showup 8s;
           animation: showup 8s;
-  font-size: .8em;
+  font-size: .5em;
   color: black;
   letter-spacing: 2px;
   font-family: 'Raleway', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .hero-image .hero-work {
+    font-size: .8em;
+  }
 }
 
 .hero-image .hero-name {
@@ -194,29 +209,6 @@ li, button {
   font-size: 1.3em;
   color: black;
   letter-spacing: 2px;
-}
-
-.hero-image .contact {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: #E6E8E6;
-  border-color: #2F3530;
-  display: block;
-  border-radius: 4px;
-  -webkit-transition: .4s;
-  transition: .4s;
-  padding: 1em 1em;
-  color: #969c97;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-decoration: none;
-  z-index: 101;
-  font-size: 0.9em;
-  height: 100%;
 }
 
 @-webkit-keyframes slidein1 {
@@ -265,28 +257,48 @@ li, button {
   }
 }
 
+.hero-image .hire a:hover {
+  color: #000000;
+}
+
+.hero-image .inner-hero .btn {
+  color: black;
+}
+
 .hero-image .hire {
-  z-index: 101;
+  z-index: 102;
   position: absolute;
-  top: 67.5%;
+  padding: 0.5em 0.5em;
+  margin: 0 auto;
+  top: 73%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #777e78;
   border: 3px solid #2c5533;
   display: block;
   border-radius: 10px;
-  -webkit-transition: all .4s ease 0s;
-  transition: all .4s ease 0s;
-  padding: 0 0.5em;
-  color: #E6E8E6;
+  color: #000000;
+  overflow: hidden;
   text-transform: uppercase;
-  font-weight: 00;
+  font-size: 20px;
+  font-weight: 900;
   text-align: center;
   letter-spacing: 3px;
   text-decoration: none;
   -webkit-animation: slidein1 4s forwards;
           animation: slidein1 4s forwards;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: rgba(229, 226, 226, 0.3);
+}
+
+@media (min-width: 768px) {
+  .hero-image .hire {
+    font-size: 24px;
+    top: 70%;
+    left: 50%;
+    color: white;
+  }
 }
 
 .hero-image .nav {
@@ -294,17 +306,19 @@ li, button {
   height: 70px;
   line-height: 70px;
   font-family: 'Playfair Display', 'serif';
+  color: black;
 }
 
 .hero-image .menu {
   text-align: center;
   width: 100%;
   display: none;
+  position: fixed;
 }
 
 @media (min-width: 768px) {
   .hero-image .menu {
-    background: rgba(104, 80, 80, 0.4);
+    background: rgba(0, 0, 0, 0.4);
     margin: 0 30px 0 0;
     position: fixed;
     display: -ms-grid;
@@ -315,11 +329,18 @@ li, button {
   }
 }
 
+.hero-image .nav a {
+  color: black;
+}
+
 .hero-image .menu a {
   margin: 0;
+  z-index: 102;
+  color: black;
+  text-transform: uppercase;
+  list-style-type: none;
   text-decoration: none;
   display: block;
-  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
@@ -329,7 +350,6 @@ li, button {
     margin: 0 10px;
     line-height: 70px;
     letter-spacing: 3px;
-    z-index: 102;
     display: -ms-grid;
     display: grid;
     font-family: 'Playfair Display', 'serif';
@@ -339,7 +359,6 @@ li, button {
 
 .hero-image label {
   display: block;
-  cursor: pointer;
   margin: 0 40px 0 0;
   font-size: 29px;
   line-height: 70px;
@@ -511,6 +530,7 @@ img {
 #section-c {
   width: 100%;
   grid-area: section-c;
+  height: auto;
 }
 
 #section-c p {
@@ -836,7 +856,8 @@ input:focus, textarea:focus {
 
 .contact-content a {
   text-decoration: none;
-  color: black;
+  font-size: .8em;
+  color: #000000;
 }
 
 .copyright {

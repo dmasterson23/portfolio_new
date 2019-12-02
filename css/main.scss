@@ -145,17 +145,21 @@ li, button ,a{
 
 
 .hero-text{
-  // font-family: 'Playfair Display', 'serif';
+   font-family: 'Playfair Display', 'serif';
   padding: 0;
-  // font: color(secondary);
+  font-size: 0.5em;
 }
 
 .hero-work{
   animation: showup 8s;
-  font-size: .8em;
-  color: black;
+  font-size: .5em;
+  color:black;
   letter-spacing: 2px;
   font-family: 'Raleway', sans-serif;
+  @include tablet{
+    font-size: .8em;
+
+  }
 }
  
 .hero-name{
@@ -186,26 +190,44 @@ li, button ,a{
 
 .hire a:hover{
   color: #000000;
+} 
+
+.inner-hero .btn{
+  color: black;
 }
-.hire {
+ .hire {
   z-index: 102;
   position: absolute;
-  top: 67.5%; 
+  padding: $padding/2 $padding/2;
+  margin: 0 auto;
+  top: 73%; 
   left: 50%;
   transform: translate(-50%,-50%);
    border: 3px solid rgb(44, 85, 51);
   display: block;
   border-radius: 10px;
-  color: black;
+  color: #000000;
+  overflow: hidden;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 900;
   text-align: center;
   letter-spacing: 3px;
   text-decoration: none;
   animation: slidein1 4s forwards;
- 
-}
+  object-fit: contain;
+  background: rgba(229, 226, 226, 0.3);
+  
+
+  @include tablet{
+    font-size: 24px;
+    top: 70%; 
+    left: 50%;
+    color: white;
+
+  }
+ }
+
 
 
  .nav
@@ -228,7 +250,7 @@ li, button ,a{
 
   
   @include tablet{
-    background: rgba(0,0,0 0.4); 
+    background: rgba(0,0,0, 0.4); 
   margin: 0 30px 0 0;
   position: fixed;
   display: grid;
@@ -246,6 +268,9 @@ li, button ,a{
     z-index: 102;
     color: black;
      text-transform: uppercase;
+     list-style-type: none;
+     text-decoration: none;
+     display: block;
      // background:color(primary);
    
   @include tablet{
@@ -869,7 +894,10 @@ input:focus, textarea:focus{
 
 .contact-content a{
   text-decoration: none;
-  color: black;
+  font-size: .8em;
+  color: #000000;
+
+
 }
 .copyright{
   position: sticky;
