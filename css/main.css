@@ -324,8 +324,8 @@ li, button, a {
     display: -ms-grid;
     display: grid;
     height: 60px;
-    -ms-grid-columns: ()[1fr];
-        grid-template-columns: repeat(1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 
