@@ -191,9 +191,9 @@ li, button, a {
 .hero-image .hero-work {
   -webkit-animation: showup 8s;
           animation: showup 8s;
-  font-size: .5em;
+  font-size: .45em;
   color: black;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -206,9 +206,15 @@ li, button, a {
 .hero-image .hero-name {
   -webkit-animation: showup 8s;
           animation: showup 8s;
-  font-size: 1.3em;
+  font-size: 1em;
   color: black;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
+}
+
+@media (min-width: 768px) {
+  .hero-image .hero-name {
+    font-size: 1.3em;
+  }
 }
 
 @-webkit-keyframes slidein1 {
@@ -269,35 +275,35 @@ li, button, a {
   z-index: 102;
   position: absolute;
   padding: 0.5em 0.5em;
-  margin: 0 auto;
-  top: 73%;
+  top: 80%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border: 3px solid #2c5533;
+  border: 2px solid #2c5533;
   display: block;
   border-radius: 10px;
   color: #000000;
+  -o-object-fit: fill;
+     object-fit: fill;
   overflow: hidden;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 900;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-decoration: none;
   -webkit-animation: slidein1 4s forwards;
           animation: slidein1 4s forwards;
-  -o-object-fit: contain;
-     object-fit: contain;
   background: rgba(229, 226, 226, 0.3);
 }
 
 @media (min-width: 768px) {
   .hero-image .hire {
     font-size: 24px;
-    top: 70%;
+    top: 68%;
     left: 50%;
-    color: white;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
@@ -313,8 +319,6 @@ li, button, a {
   text-align: center;
   width: 100%;
   display: none;
-  position: fixed;
-  display: block;
 }
 
 @media (min-width: 768px) {

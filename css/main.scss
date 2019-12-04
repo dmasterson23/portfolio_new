@@ -152,9 +152,9 @@ li, button ,a{
 
 .hero-work{
   animation: showup 8s;
-  font-size: .5em;
+  font-size: .45em;
   color:black;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-family: 'Raleway', sans-serif;
   @include tablet{
     font-size: .8em;
@@ -164,9 +164,12 @@ li, button ,a{
  
 .hero-name{
   animation: showup 8s  ;
-  font-size: 1.3em;
+  font-size: 1em;
   color: black;
-  letter-spacing: 2px; 
+  letter-spacing: 1.5px; 
+  @include tablet{
+    font-size: 1.3em;
+  }
 }
 
  @keyframes slidein1{
@@ -199,31 +202,30 @@ li, button ,a{
   z-index: 102;
   position: absolute;
   padding: $padding/2 $padding/2;
-  margin: 0 auto;
-  top: 73%; 
+  top: 80%; 
   left: 50%;
   transform: translate(-50%,-50%);
-   border: 3px solid rgb(44, 85, 51);
+   border: 2px solid rgb(44, 85, 51);
   display: block;
   border-radius: 10px;
   color: #000000;
+  object-fit: fill;
   overflow: hidden;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 900;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-decoration: none;
   animation: slidein1 4s forwards;
-  object-fit: contain;
   background: rgba(229, 226, 226, 0.3);
   
 
   @include tablet{
     font-size: 24px;
-    top: 70%; 
+    top: 68%; 
     left: 50%;
-    color: white;
+    transform: translate(-50%,-50%);
 
   }
  }
@@ -245,9 +247,8 @@ li, button ,a{
     text-align: center;
     width: 100%;
     display: none;
-    position: fixed;
-    display: block;
-     
+    // position: fixed;
+      
 
   
   @include tablet{
